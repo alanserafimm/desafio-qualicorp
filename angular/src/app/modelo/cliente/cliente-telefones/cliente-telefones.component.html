@@ -1,0 +1,43 @@
+<mat-card label="First">
+
+    <div [hidden]="!viewChange">
+        <app-data-table [option]="clienteTelefonesDataTable" [filter]="filterData"></app-data-table>
+    </div>
+
+    <div [hidden]="viewChange">
+        <form [formGroup]="clienteTelefonesForm">
+
+            <div class="mb-4 cssHeader" (click)="onClickLast()">
+                <span><label><i class="fas fa-long-arrow-alt-left"></i>&nbsp;Voltar</label></span>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md">
+                    <mat-form-field class="form-field" appearance="fill">
+                        <mat-label> Prefixo </mat-label>
+                        <input type="number"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            matInput formControlName="prefixo" maxlength="2" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md">
+                    <mat-form-field class="form-field" appearance="fill">
+                        <mat-label> Número </mat-label>
+                        <input type="number"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            matInput formControlName="numero" maxlength="9" required>
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+            <div [hidden]="!(clienteTelefonesForm.touched)">
+                <app-spinner-button [option]="btnSalvar"></app-spinner-button>
+            </div>
+
+        </form>
+    </div>
+
+</mat-card>

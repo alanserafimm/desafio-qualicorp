@@ -1,0 +1,15 @@
+.cssLabel{
+    top: 3px!important;
+    left: 4px!important;
+}
+
+.cssHeader {
+    cursor: pointer;
+}
+
+.cssHeader label{
+    cursor: pointer;
+    position: relative;
+    left: 4px!important;
+}
+

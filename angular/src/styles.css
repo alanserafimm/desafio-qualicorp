@@ -1,0 +1,42 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%) */
+}
+
+.mat-raised-button{
+    outline: none!important;
+}
+
+.mat-form-field{
+    width: 100%!important;
+}
+
+.mat-button{
+    outline: none!important;
+}
+
+.mat-spinner{
+    position: absolute!important;
+}
+
+mat-icon-button {
+    outline: none!important;
+}
+
+.mat-mini-fab{
+    outline: none!important;
+}
+
+i {
+    font-size: 14px;
+}
+
+.cssLabel {
+    cursor: pointer;
+}
+
+.mat-header-cell {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}

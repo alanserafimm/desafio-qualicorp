@@ -1,0 +1,69 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-12 mt-5">
+
+            <div [hidden]="!viewChange">
+                <app-data-table [option]="clienteDataTable" [filter]="filterData"></app-data-table>
+            </div>
+
+            <div [hidden]="viewChange">
+                <form [formGroup]="clienteForm">
+
+                    <mat-card label="First">
+
+                        <div class="mb-4 cssHeader" (click)="onClickLast()">
+                            <span><label><i class="fas fa-long-arrow-alt-left"></i>&nbsp;Voltar</label></span>
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-md">
+                                <mat-form-field class="form-field" appearance="fill">
+                                    <mat-label> Cpf </mat-label>
+                                    <input type="number"
+                                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                        matInput formControlName="cpf" maxlength="11" required>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="col-md">
+                                <mat-form-field class="form-field" appearance="fill">
+                                    <mat-label> Nome </mat-label>
+                                    <input type="text" matInput formControlName="nome" maxlength="50" required>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="col-md">
+                                <mat-form-field class="form-field" appearance="fill">
+                                    <mat-label> Email </mat-label>
+                                    <input type="text" matInput formControlName="email" maxlength="50" required>
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+
+                        <div [hidden]="!(clienteForm.touched)">
+                            <app-spinner-button [option]="btnSalver"></app-spinner-button>
+                        </div>
+
+                        <div [hidden]="!clienteForm.value._id">
+                            <mat-tab-group [selectedIndex]="1">
+                                <mat-tab label="Telefones">
+                                    <app-cliente-telefones [id]="clienteForm.value._id"></app-cliente-telefones>
+                                </mat-tab>
+                            </mat-tab-group>
+                        </div>
+
+                    </mat-card>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

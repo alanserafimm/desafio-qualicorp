@@ -1,0 +1,6 @@
+<button (click)="options.execute()" [disabled]="ativo" *ngIf="options != nulll" id="options.widgetId" mat-flat-button
+    type="{{ options.type }}" color="{{ options.color }}">
+    <mat-spinner [hidden]="!(ativo)" [diameter]="20" [color]="black"></mat-spinner>
+    <mat-icon [hidden]="ativo">{{ options.icon }}</mat-icon>
+    <span [ngClass]="classSpinner()">&nbsp;{{ options.text }}</span>
+</button>
