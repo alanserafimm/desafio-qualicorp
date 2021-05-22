@@ -41,7 +41,7 @@ export class ClienteComponent extends GenericClass<ICliente> implements OnInit {
 
     this.initForm();
 
-    this.btnSalver = this.genericService.widgetsServices.criaSpinnerButton(() => { this.onSave(); }, "btnSalver", "Salvar", "check_circle", IColor.Primary, IType.Submit);
+    this.btnSalver = this.genericService.widgetsServices.criaSpinnerButton(() => { this.onSave(); }, "btnSalver", "Salvar", "send", IColor.Primary, IType.Submit);
 
     this.clienteDataTable.onClickNew = (boolean) => { this.onClickNew(); };
     this.clienteDataTable.onClickEdit = (id) => { this.onEdit(id); };

@@ -47,7 +47,7 @@ export class ClienteTelefonesComponent extends GenericClass<IClienteTelefones> i
 
     this.initForm();
 
-    this.btnSalvar = this.genericServices.widgetsServices.criaSpinnerButton(() => { this.onSave(); }, "btnSalverTelefone", "Salvar", "check_circle", IColor.Primary, IType.Button);
+    this.btnSalvar = this.genericServices.widgetsServices.criaSpinnerButton(() => { this.onSave(); }, "btnSalverTelefone", "Salvar", "send", IColor.Primary, IType.Button);
 
     this.clienteTelefonesDataTable.onClickNew = (boolean) => { this.onClickNew(); };
     this.clienteTelefonesDataTable.onClickEdit = (id) => { this.onEdit(id); };

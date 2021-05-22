@@ -10,5 +10,16 @@ table {
     color: black;
 }
 
+.min-width{
+    width: 0!important;
+    min-width: 100px!important;
+}
+
+.min-width-header{
+    width: 0!important;
+    min-width: 50px!important;
+}
+
+
 
 

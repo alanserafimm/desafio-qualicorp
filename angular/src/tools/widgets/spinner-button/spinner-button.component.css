@@ -1,33 +1,31 @@
 button{
-    min-width: 9%; 
-    height: 31px; 
+    min-width: 100px; 
+    height: 28px; 
     outline: none!important;
 }
 
 mat-icon {  
-    font-size: large;
     position: relative;
-    top: 1px;
-    right: 4px;
+    font-size: large;
+    bottom: 1px;
 }
 
 mat-spinner {
     width: 20px;
     height: 20px;
     position: relative;
-    left: 8.1px;
-    top: 6.1px;
+    top: 5.1px;
 }
 
 .cssIcon{
     position: relative;
-    left: 1px;
-    bottom: 1px;
+    left: 2px;
+    bottom: 4px;
 }
 
 .cssSppinner{
     position: relative;
-    bottom: 1px;
-    left: 5px;
+    left: 15px;
+    bottom: 4px;
 }
 

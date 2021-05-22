@@ -40,3 +40,11 @@ i {
     text-transform: uppercase;
     font-weight: bolder;
 }
+
+th.mat-header-cell {
+    text-align: center!important;
+}
+
+td {
+    text-align: center!important;
+}
